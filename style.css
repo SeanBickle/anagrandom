@@ -1,0 +1,87 @@
+body {
+    background: rgb(20,20,20);
+    font-family: monospace;
+    font-size: 0px;
+    font-weight: bold;
+    color: white;
+    margin: 0px;
+    user-select: none;
+}
+
+#main-container{
+    position: absolute;
+    left: 50%;
+    width: 800px;
+    margin-left: -400px;
+    height: 100%;
+    overflow: hidden;
+}
+
+@media only screen and (max-width: 900px) {
+    #main-container {
+        width: 90%;
+        margin-left: 5%;
+        left: 0;
+    }
+}
+
+.letter-container{
+    position: relative;
+    width: 100%;
+    aspect-ratio: 10 / 1;
+}
+
+.letter{
+    position: relative;
+    height: 100%;
+    width: 10%;
+    display: inline-flex;
+    background: black;
+    border: 2px solid white;
+    box-sizing: border-box;
+    font-size: 24px;
+    align-items: center;
+    justify-content: center;
+}
+
+#input-container{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.btn-container{
+    position: relative;
+    width: 100%;
+    aspect-ratio: 10/1;
+    background: green;
+}
+
+.btn{
+    height: 100%;
+    width: 50%;
+    position: relative;
+    display: inline-flex;
+    font-size: 24px;
+    letter-spacing: 1px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background: black;
+    border: 2px solid white;
+    box-sizing: border-box;
+}
+
+#output-container{
+    height: 100%;
+    width: 100%;
+    overflow-x: scroll;
+}
+
+.letter-btn{
+    cursor: pointer;
+}
+
+.letter-btn-selected{
+    background: rgb(2, 172, 132);
+}
