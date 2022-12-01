@@ -7,6 +7,8 @@ SELECTION_COUNT = 10
 INPUT_CHARS = []
 // Selection
 SELECTION = []
+// Character that gets displayed when no char is selected
+DEFAULT_SELECTION_CHAR = '_'
 
 function get_random_char(){
     // Get a random char from the CHARS distribution
@@ -30,6 +32,11 @@ class Letter{
     select(){
         this.selected = true
         this.el.classList.add('letter-btn-selected')
+    }
+
+    deselect(){
+        this.selected = false
+        this.el.classList.remove('letter-btn-selected')
     }
 }
 
@@ -55,6 +62,21 @@ function select_letter_btn(tile_index){
     selection_tile = document.getElementsByClassName('letter-selection unselected')[0]
     selection_tile.classList.remove('unselected')
     selection_tile.innerText = tile.char
+}
+
+function clear_selection(){
+    // Visually reset selection letters
+    selection_tiles = document.getElementsByClassName('letter-selection')
+    for(var i = 0; i < selection_tiles.length; i++){
+        selection_tiles[i].innerText = DEFAULT_SELECTION_CHAR
+        selection_tiles[i].classList.add('unselected')
+    }
+    // Visually reset input letters
+    INPUT_CHARS.forEach(element => {
+        element.deselect()
+    });
+    // Clear selected word from buffer
+    SELECTION = []
 }
 
 window.onload = function(){
