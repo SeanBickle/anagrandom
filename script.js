@@ -9,6 +9,10 @@ INPUT_CHARS = []
 SELECTION = []
 // Character that gets displayed when no char is selected
 DEFAULT_SELECTION_CHAR = '_'
+// List of words found by the user
+FOUND_WORDS = []
+// Minimum acceptable word length
+MIN_WORD_LENGTH = 2
 
 function get_random_char(){
     // Get a random char from the CHARS distribution
@@ -42,7 +46,7 @@ class Letter{
 
 function is_word(word){
     // Determine if the word is in the wordlist
-    return WORDLIST.includes(word)
+    return WORDLIST.includes(word.toLowerCase())
 }
 
 function generate_game_data(num_chars){
@@ -50,6 +54,23 @@ function generate_game_data(num_chars){
     chars = []
     for(i = 0; i < num_chars; i++) chars.push(new Letter(i))
     return chars
+}
+
+// Render functions
+function get_letter_el(letter){
+    return `<div class="letter output-letter">${letter}</div>`
+}
+
+function get_letter_container_el(letters){
+    letter_els = ''
+    letters.forEach(letter => {letter_els += get_letter_el(letter)})
+    return `<div class="letter-container">${letter_els}</div>`
+}
+
+function render_word_output(letters){
+    letter_container_el = get_letter_container_el(letters)
+    output_container = document.getElementById('output-container')
+    output_container.innerHTML = letter_container_el + output_container.innerHTML
 }
 
 // UI buttons
@@ -77,6 +98,20 @@ function clear_selection(){
     });
     // Clear selected word from buffer
     SELECTION = []
+}
+
+function enter_selection(){
+    word = SELECTION.join('')
+    if(
+        word.length >= MIN_WORD_LENGTH
+        && is_word(word)
+        && !FOUND_WORDS.includes(word)
+    ){
+        FOUND_WORDS.push(word)
+        render_word_output(SELECTION)
+        clear_selection()
+    }
+    else console.log('Not a word!')
 }
 
 window.onload = function(){

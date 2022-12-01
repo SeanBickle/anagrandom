@@ -24,7 +24,12 @@
                 <div class="letter letter-selection unselected">_</div>
             </div>
             <!-- Displays user's word outputs -->
-            <div id="output-container"></div>
+            <div id="output-container">
+                <!-- Dud containers to pad the output -->
+                <div class="letter-container"></div>
+                <div class="letter-container"></div>
+                <div class="letter-container"></div>
+            </div>
             <!-- Displays user input letters -->
             <div id="input-container">
                 <div class="letter-container">
@@ -41,7 +46,7 @@
                 </div>
                 <div class="btn-container">
                     <div class="btn" onclick="clear_selection()">CLEAR</div>
-                    <div class="btn">ENTER</div>
+                    <div class="btn" onclick="enter_selection()">ENTER</div>
                 </div>
             </div>
         </div>

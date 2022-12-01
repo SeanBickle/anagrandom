@@ -45,6 +45,11 @@ body {
     transition-duration: 0.15s;
 }
 
+.output-letter{
+    background: rgb(50,50,50);
+    color: rgb(210,210,210);
+}
+
 #input-container{
     position: absolute;
     bottom: 0;
