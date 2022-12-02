@@ -28,13 +28,13 @@ body {
 .letter-container{
     position: relative;
     width: 100%;
-    aspect-ratio: 10 / 1;
+    aspect-ratio: 8 / 1;
 }
 
 .letter{
     position: relative;
     height: 100%;
-    width: 10%;
+    width: 12.5%;
     display: inline-flex;
     background: black;
     border: 2px solid white;
@@ -53,12 +53,13 @@ body {
     position: absolute;
     bottom: 0;
     width: 100%;
+    background: white;
 }
 
 .btn-container{
     position: relative;
     width: 100%;
-    aspect-ratio: 10/1;
+    aspect-ratio: 8/1;
     background: green;
 }
 
