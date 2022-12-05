@@ -80,8 +80,8 @@ function select_letter_btn(tile_index){
     if(tile.selected) return
     tile.select()
     SELECTION.push(tile.char)
-    selection_tile = document.getElementsByClassName('letter-selection unselected')[0]
-    selection_tile.classList.remove('unselected')
+    selection_tile = document.getElementsByClassName('letter-selection letter-unselected')[0]
+    selection_tile.classList.remove('letter-unselected')
     selection_tile.innerText = tile.char
 }
 
@@ -90,7 +90,7 @@ function clear_selection(){
     selection_tiles = document.getElementsByClassName('letter-selection')
     for(var i = 0; i < selection_tiles.length; i++){
         selection_tiles[i].innerText = DEFAULT_SELECTION_CHAR
-        selection_tiles[i].classList.add('unselected')
+        selection_tiles[i].classList.add('letter-unselected')
     }
     // Visually reset input letters
     INPUT_CHARS.forEach(element => {

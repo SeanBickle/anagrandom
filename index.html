@@ -10,17 +10,6 @@
 
     <body>
         <div id="main-container">
-            <!-- Displays user selection -->
-            <div class="letter-container" id="selection-container">
-                <div class="letter letter-selection unselected">_</div>
-                <div class="letter letter-selection unselected">_</div>
-                <div class="letter letter-selection unselected">_</div>
-                <div class="letter letter-selection unselected">_</div>
-                <div class="letter letter-selection unselected">_</div>
-                <div class="letter letter-selection unselected">_</div>
-                <div class="letter letter-selection unselected">_</div>
-                <div class="letter letter-selection unselected">_</div>
-            </div>
             <!-- Displays user's word outputs -->
             <div id="output-container">
                 <!-- Dud containers to pad the output -->
@@ -28,8 +17,19 @@
                 <div class="letter-container"></div>
                 <div class="letter-container"></div>
             </div>
-            <!-- Displays user input letters -->
             <div id="input-container">
+                <!-- Displays user selection -->
+                <div class="letter-container" id="selection-container">
+                    <div class="letter letter-selection letter-unselected">_</div>
+                    <div class="letter letter-selection letter-unselected">_</div>
+                    <div class="letter letter-selection letter-unselected">_</div>
+                    <div class="letter letter-selection letter-unselected">_</div>
+                    <div class="letter letter-selection letter-unselected">_</div>
+                    <div class="letter letter-selection letter-unselected">_</div>
+                    <div class="letter letter-selection letter-unselected">_</div>
+                    <div class="letter letter-selection letter-unselected">_</div>
+                </div>
+                <!-- Displays user input letters -->
                 <div class="letter-container">
                     <div class="letter letter-btn" id="letter-btn-0" onclick="select_letter_btn(0)"></div>
                     <div class="letter letter-btn" id="letter-btn-1" onclick="select_letter_btn(1)"></div>
