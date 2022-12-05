@@ -42,6 +42,12 @@ class Letter{
         this.selected = false
         this.el.classList.remove('letter-btn-selected')
     }
+
+    set_index(index){
+        this.index = index;
+        this.el = document.getElementById('letter-btn-' + index);
+        this.el.innerText = this.char
+    }
 }
 
 function is_word(word){
@@ -112,6 +118,18 @@ function enter_selection(){
         clear_selection()
     }
     else console.log('Not a word!')
+}
+
+function shuffle_selection(){
+    clear_selection()
+    for (var i = INPUT_CHARS.length - 1; i > 0; i--) {
+        var j = Math.floor(Math.random() * (i + 1));
+        var temp = INPUT_CHARS[i];
+        INPUT_CHARS[i] = INPUT_CHARS[j];
+        INPUT_CHARS[j] = temp;
+        INPUT_CHARS[i].set_index(i)
+        INPUT_CHARS[j].set_index(j)
+    }
 }
 
 window.onload = function(){
