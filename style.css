@@ -90,8 +90,8 @@ body {
 }
 
 .letter-btn-selected{
-    background: lightgrey;
-    color: rgb(160,160,160);
+    background: rgb(245,245,245);
+    color: rgb(245,245,245);
 }
 
 .letter-selection{
