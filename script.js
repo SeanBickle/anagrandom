@@ -132,6 +132,17 @@ function shuffle_selection(){
     }
 }
 
-window.onload = function(){
+function new_game(){
+    // Clear selection container
+    clear_selection()
+    // Clear any found words
+    FOUND_WORDS = []
+    // Clear visual found words
+    document.getElementById('output-container-words').innerHTML = ''
+    // Reset input chars
     INPUT_CHARS = generate_game_data(SELECTION_COUNT)
+}
+
+window.onload = function(){
+    new_game()
 }
