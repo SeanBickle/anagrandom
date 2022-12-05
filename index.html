@@ -12,6 +12,7 @@
         <div id="main-container">
             <!-- Displays user's word outputs -->
             <div id="output-container">
+                <div id="output-container-words"></div>
                 <!-- Dud containers to pad the output -->
                 <div class="letter-container"></div>
                 <div class="letter-container"></div>
@@ -41,10 +42,10 @@
                     <div class="letter letter-btn" id="letter-btn-7" onclick="select_letter_btn(7)"></div>
                 </div>
                 <div class="btn-container">
-                    <div class="btn" onclick="clear_selection()"><i class="fa-solid fa-trash"></i></div>
-                    <div class="btn" onclick="quit_game()"><i class="fa-solid fa-times"></i></div>
+                    <div class="btn btn-danger" onclick="new_game()"><i class="fa-solid fa-times"></i></div>
+                    <div class="btn" onclick="clear_selection()"><i class="fa-solid fa-undo"></i></div>
                     <div class="btn" onclick="shuffle_selection()"><i class="fa-solid fa-shuffle"></i></div>
-                    <div class="btn" onclick="enter_selection()"><i class="fa-solid fa-play"></i></div>
+                    <div class="btn btn-success" onclick="enter_selection()"><i class="fa-solid fa-play"></i></div>
                 </div>
             </div>
         </div>

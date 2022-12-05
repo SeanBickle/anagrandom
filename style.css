@@ -79,6 +79,14 @@ body {
     box-sizing: border-box;
 }
 
+.btn-success{
+    background:rgb(2, 172, 132);
+}
+
+.btn-danger{
+    background:rgb(172, 2, 70)
+}
+
 #output-container{
     height: 100%;
     width: 100%;
