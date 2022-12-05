@@ -75,7 +75,7 @@ function get_letter_container_el(letters){
 
 function render_word_output(letters){
     letter_container_el = get_letter_container_el(letters)
-    output_container = document.getElementById('output-container')
+    output_container = document.getElementById('output-container-words')
     output_container.innerHTML = letter_container_el + output_container.innerHTML
 }
 
