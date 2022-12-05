@@ -1,5 +1,5 @@
 body {
-    background: rgb(20,20,20);
+    background: rgb(30,35,30);
     font-family: monospace;
     font-size: 0px;
     font-weight: bold;
@@ -37,7 +37,7 @@ body {
     width: 12.5%;
     display: inline-flex;
     background: black;
-    border: 2px solid white;
+    border: 2px solid rgb(245,245,245);
     box-sizing: border-box;
     font-size: 24px;
     align-items: center;
@@ -45,8 +45,9 @@ body {
 }
 
 .output-letter{
-    background: rgb(50,50,50);
-    color: rgb(210,210,210);
+    background: rgb(70,78,70);
+    color: rgb(245,245,245);
+    border-color: rgb(245,245,245);
 }
 
 #input-container{
@@ -60,7 +61,6 @@ body {
     position: relative;
     width: 100%;
     aspect-ratio: 8/1;
-    background: green;
 }
 
 .btn{
@@ -74,7 +74,7 @@ body {
     justify-content: center;
     cursor: pointer;
     background: black;
-    border: 2px solid white;
+    border: 2px solid rgb(245,245,245);
     box-sizing: border-box;
 }
 
