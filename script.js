@@ -52,7 +52,7 @@ class Letter{
 
 function is_word(word){
     // Determine if the word is in the wordlist
-    return WORDLIST.includes(word.toLowerCase())
+    return WORDLIST[word.toLowerCase()]
 }
 
 function generate_game_data(num_chars){
