@@ -44,6 +44,11 @@ body {
     justify-content: center;
 }
 
+#word-progress{
+    width: 100%;
+    letter-spacing: 2px;
+}
+
 .output-letter{
     background: rgb(70,78,70);
     color: rgb(245,245,245);

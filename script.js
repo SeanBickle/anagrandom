@@ -15,6 +15,10 @@ FOUND_WORDS = []
 POSSIBLE_WORDS = []
 // Minimum acceptable word length
 MIN_WORD_LENGTH = 2
+// Element displaying the total possible word count
+EL_WORD_COUNT_TOTAL = document.getElementById('word-count-total')
+// Element displaying the count of the found words
+EL_WORD_COUNT_FOUND = document.getElementById('word-count-found')
 
 function get_random_char(){
     // Get a random char from the CHARS distribution
@@ -116,6 +120,7 @@ function enter_selection(){
         && !FOUND_WORDS.includes(word)
     ){
         FOUND_WORDS.push(word)
+        EL_WORD_COUNT_FOUND.innerText = FOUND_WORDS.length
         render_word_output(SELECTION)
         clear_selection()
     }
@@ -139,12 +144,15 @@ function new_game(){
     clear_selection()
     // Clear any found words
     FOUND_WORDS = []
+    EL_WORD_COUNT_FOUND.innerText = 0
     // Clear visual found words
     document.getElementById('output-container-words').innerHTML = ''
     // Reset input chars
     INPUT_CHARS = generate_game_data(SELECTION_COUNT)
     // Find all possible words
     POSSIBLE_WORDS = get_possible_words(INPUT_CHARS.map(letter => letter.char))
+    // Display how many words there are to find
+    EL_WORD_COUNT_TOTAL.innerText = POSSIBLE_WORDS.length
 }
 
 function get_possible_words(chars, branch=''){
