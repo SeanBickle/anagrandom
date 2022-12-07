@@ -11,6 +11,8 @@ SELECTION = []
 DEFAULT_SELECTION_CHAR = '_'
 // List of words found by the user
 FOUND_WORDS = []
+// List of all possible words based on input letters
+POSSIBLE_WORDS = []
 // Minimum acceptable word length
 MIN_WORD_LENGTH = 2
 
@@ -141,6 +143,8 @@ function new_game(){
     document.getElementById('output-container-words').innerHTML = ''
     // Reset input chars
     INPUT_CHARS = generate_game_data(SELECTION_COUNT)
+    // Find all possible words
+    POSSIBLE_WORDS = get_possible_words(INPUT_CHARS.map(letter => letter.char))
 }
 
 function get_possible_words(chars, branch=''){
