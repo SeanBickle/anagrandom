@@ -174,7 +174,7 @@ function get_possible_words(chars, branch=''){
     found = []
     next_char_nodes.forEach(char => {
         word = branch + char
-        if(is_word(word) && word.length > MIN_WORD_LENGTH) found.push(word)
+        if(is_word(word) && word.length >= MIN_WORD_LENGTH) found.push(word)
         // Hacky way of generating a new list with the current element hidden
         remaining_chars = chars.filter((c, index) => index != chars.indexOf(char))
         found = found.concat(get_possible_words(remaining_chars, word))
