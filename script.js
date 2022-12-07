@@ -13,8 +13,8 @@ DEFAULT_SELECTION_CHAR = '_'
 FOUND_WORDS = []
 // List of all possible words based on input letters
 POSSIBLE_WORDS = []
-// Minimum acceptable word length
-MIN_WORD_LENGTH = 2
+// Minimum acceptable word length (inclusive)
+MIN_WORD_LENGTH = 3
 // Element displaying the total possible word count
 EL_WORD_COUNT_TOTAL = document.getElementById('word-count-total')
 // Element displaying the count of the found words
